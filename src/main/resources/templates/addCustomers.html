@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Add Customers</title>
+    <link rel="stylesheet"  href="../static/styles.css"/>
+</head>
+<body>
+
+<header>
+
+    <a href="/">Home</a>
+    <a href="/customers">Customers </a>
+    <a href="/viewCustomers">View Customers</a>
+
+
+</header>
+
+<div>
+
+<form action="/addCustomers" method="post">
+
+    <span> <label>First Name: </label><input type="text" name="firstName"/></span>
+    <span><label>Last Name: </label><input type="text" name="lastName"/></span>
+    <span><label>Email: </label><input type="text" name="email"/></span>
+    <span><label>Phone: </label><input type="text" name="phone"/></span>
+
+    <input type="submit" name="Add"/>
+
+</form>
+</div>
+
+</body>
+</html>

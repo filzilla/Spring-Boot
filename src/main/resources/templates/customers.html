@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:Id="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Customers</title>
+    <link rel="stylesheet"  href="../static/styles.css"/>
+</head>
+<body>
+
+<header>
+
+    <a href="/">Home</a>
+    <a href="/customers">Customers </a>
+    <a href="/addCustomers">Add Customers</a>
+
+</header>
+
+
+<div>
+    <table>
+
+
+        <tr th:each="customer : ${customers}">
+
+            <td>
+                <a th:href="@{'/viewCustomer/' + ${customer.id}}">
+                    <span th:text="${customer.id}"></span>
+                </a>
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+</body>
+</html>

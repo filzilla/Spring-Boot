@@ -1,25 +1,14 @@
 package com.example.customer.repository;
 
 import com.example.customer.domain.Customer;
-
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * Created by phillipdelia on 8/3/17.
  */
-public interface CustomerRepository {
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
 
-    // add a customer
-    void add (Customer customer);
-    //update a customer
-    void update (Customer customer);
-    //get a customer by id
-    Customer getById(int id);
-    // get all customers
-    List<Customer> get();
-    //delete a customer
-     void delete(int id);
 
 }
 

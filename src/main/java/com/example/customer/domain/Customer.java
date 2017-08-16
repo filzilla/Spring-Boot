@@ -1,9 +1,16 @@
 package com.example.customer.domain;
 
+import javax.persistence.*;
+
 /**
  * Created by phillipdelia on 8/3/17.
  */
+
+@Entity
+@Table(name = "customer")
 public class Customer {
+
+
 
     int id;
     String firstName;
@@ -17,6 +24,8 @@ public class Customer {
 
     }
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     public int getId() {
         return id;
     }
@@ -26,6 +35,7 @@ public class Customer {
         this.id = id;
     }
 
+    @Column(name ="firstname")
     public String getFirstName() {
         return firstName;
     }
@@ -34,6 +44,7 @@ public class Customer {
         this.firstName = firstName;
     }
 
+    @Column(name = "lastname")
     public String getLastName() {
         return lastName;
     }
@@ -42,6 +53,7 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    @Column(name = "phone")
     public String getPhone() {
         return phone;
     }
@@ -50,6 +62,7 @@ public class Customer {
         this.phone = phone;
     }
 
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
